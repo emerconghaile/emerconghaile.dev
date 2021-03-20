@@ -149,12 +149,16 @@ body {
     color: var(--white-color);
     text-decoration: none;
 }
-.about-icons a:hover .icon, a:active .icon {
-    font-size: 9rem;
-}
 .icon {
     font-size: 6rem;
     padding: 1em;
+    transition: all 250ms ease;
+}
+.about-icons a:hover .icon{
+    transform: scale(1.5);
+}
+.about-icons a:active .icon {
+    transform: scale(1.5);
 }
 .divider {
     border-bottom: 1px solid var(--white-color);

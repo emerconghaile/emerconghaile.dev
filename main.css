@@ -200,7 +200,7 @@ body {
     text-align: center;
     margin: 1rem;
     outline: 1rem solid rgba(0, 0, 0, 0);
-    transition: outline 300ms ease;
+    transition: outline 300ms ease, border 300ms ease;
 }
 .portfolio-item:hover {
     border: 1rem solid var(--white-color);

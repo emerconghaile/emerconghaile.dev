@@ -30,7 +30,7 @@
     <header>
         <nav>
             <div class="nav-home">
-                <a class="home-link" href="#">Emer Conghaile</a>
+                <a class= "home-link" onclick="myAudioFunction()" href="#">Emer Conghaile</a>
             </div>
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -101,5 +101,11 @@
                 <p>Work in progress.</p>
         </section>
     </main>
+    <script>
+        var Audio = new Audio('bruh.mp3');
+        function myAudioFunction() {
+            Audio.play();
+        }
+    </script>
 </body>
 </html>

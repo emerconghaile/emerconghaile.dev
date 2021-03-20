@@ -86,7 +86,7 @@ nav a {
     border: 1px solid var(--white-color);
 }
 .nav-links a {
-    outline: solid 1px var(--white-color);
+    outline: solid 0px var(--white-color);
     transition:
         background-color 250ms ease,
         color 250ms ease,

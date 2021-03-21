@@ -1,21 +1,21 @@
 :root {
     --header-height: 64px;
-    --white-color: #f2f2f2;
-    --light-grey-color: #616161;
-    --dary-grey-color: #333;
+    --clr-white: #f2f2f2;
+    --clr-light-gray: #616161;
+    --clr-dark-gray: #333;
 }
 ::-webkit-scrollbar {
     width: 15px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--white-color);
+    background: var(--clr-white);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--dary-grey-color);
-    border: 1px solid var(--white-color);
+    background: var(--clr-dark-gray);
+    border: 1px solid var(--clr-white);
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--light-grey-color);
+    background: var(--clr-light-gray);
 }
 * {
     box-sizing: border-box;
@@ -27,13 +27,18 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
+body {
+    background-image: linear-gradient(45deg,#2e3234,#242728);
+    height: 100%;
+    width: 100%;
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: auto;
-    background-color: var(--white-color);
+    background-color: var(--clr-white);
 }
 nav {
     height: 100%;
@@ -44,23 +49,23 @@ nav {
 }
 nav a {
     text-decoration: none;
-    color: var(--dary-grey-color);
+    color: var(--clr-dark-gray);
     font-size: 2.5rem;
     text-align: center;
     padding: 1em;
 }
 .nav-home {
-    color: var(--light-grey-color);
+    color: var(--clr-light-gray);
     height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid var(--dary-grey-color);
+    border-bottom: 2px solid var(--clr-dark-gray);
     writing-mode: vertical-lr;
-    border-left: 1px solid var(--white-color);
-    border-right: 1px solid var(--white-color);
-    border-top: 1px solid var(--white-color);
-    outline: solid 1px var(--white-color);
+    border-left: 1px solid var(--clr-white);
+    border-right: 1px solid var(--clr-white);
+    border-top: 1px solid var(--clr-white);
+    outline: solid 1px var(--clr-white);
     outline-offset: -1px;
     transition:
         background-color 250ms ease,
@@ -70,23 +75,23 @@ nav a {
         outline-width 250ms ease;
 }
 .nav-home:hover {
-    background-color: var(--dary-grey-color);
-    border-bottom: 1px solid var(--white-color);
+    background-color: var(--clr-dark-gray);
+    border-bottom: 1px solid var(--clr-white);
     outline-offset: -6px;
     outline-width: 6px;
 }
 .nav-home:hover .home-link {
-    color: var(--white-color);
+    color: var(--clr-white);
 }
 .nav-links {
     height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid var(--white-color);
+    border: 1px solid var(--clr-white);
 }
 .nav-links a {
-    outline: solid 0px var(--white-color);
+    outline: solid 0px var(--clr-white);
     transition:
         background-color 250ms ease,
         color 250ms ease,
@@ -94,27 +99,31 @@ nav a {
         outline-width 250ms ease;
 }
 .nav-links a:hover{
-    background-color: var(--light-grey-color);
-    color: var(--white-color);
+    background-color: var(--clr-light-gray);
+    color: var(--clr-white);
     outline-offset: -6px;
     outline-width: 6px;
 }
 .nav-links a:focus {
-    background-color: var(--light-grey-color);
-    color: var(--white-color);
+    background-color: var(--clr-light-gray);
+    color: var(--clr-white);
     outline-offset: -6px;
     outline-width: 6px;
 }
-body {
-    background-image: linear-gradient(45deg,#2e3234,#242728);
-    height: 100%;
-    width: 100%;
+.construction {
+    position: fixed;
+    right: 0;
+    padding: 1rem;
+}
+.construction p {
+    font-size: 2rem;
+    color: var(--clr-white);
 }
 .main-container {
     height: calc(100vh);
     width: 100%;
     padding-left: 140px;
-    color: var(--white-color);
+    color: var(--clr-white);
 }
 .about-title {
     height: calc(100% / 3);
@@ -146,7 +155,7 @@ body {
     align-items: center;
 }
 .about-icons a {
-    color: var(--white-color);
+    color: var(--clr-white);
     text-decoration: none;
 }
 .icon {
@@ -161,7 +170,7 @@ body {
     transform: scale(1.5);
 }
 .divider {
-    border-bottom: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--clr-white);
 }
 #portfolio {
     display: flex;
@@ -172,7 +181,7 @@ body {
     display: inline;
 }
 .portfolio-divider:first-of-type {
-    border-right: 1px solid var(--white-color);
+    border-right: 1px solid var(--clr-white);
 }
 .portfolio-divider h2 {
     font-size: 5rem;
@@ -207,8 +216,8 @@ body {
     transition: outline 300ms ease, border 300ms ease;
 }
 .portfolio-item:hover {
-    border: 1rem solid var(--white-color);
-    outline: 0px solid var(--white-color);
+    border: 1rem solid var(--clr-white);
+    outline: 0px solid var(--clr-white);
 }
 .portfolio-item h3 {
     font-size: 3rem;
@@ -216,19 +225,19 @@ body {
 }
 .has-item h3 {
     text-shadow:
-    -1px -1px 0px var(--dary-grey-color),
-    -1px 1px 0px var(--dary-grey-color),
-    1px -1px 0px var(--dary-grey-color),
-    1px 1px 0px var(--dary-grey-color);
+    -1px -1px 0px var(--clr-dark-gray),
+    -1px 1px 0px var(--clr-dark-gray),
+    1px -1px 0px var(--clr-dark-gray),
+    1px 1px 0px var(--clr-dark-gray);
 }
 .has-item p {
     font-size: 2rem;
-    color: var(--white-color);
+    color: var(--clr-white);
     text-shadow:
-    -1px -1px 0px var(--light-grey-color),
-    -1px 1px 0px var(--light-grey-color),
-    1px -1px 0px var(--light-grey-color),
-    1px 1px 0px var(--light-grey-color);
+    -1px -1px 0px var(--clr-light-gray),
+    -1px 1px 0px var(--clr-light-gray),
+    1px -1px 0px var(--clr-light-gray),
+    1px 1px 0px var(--clr-light-gray);
 }
 .champion {
     background: url("champion_snorkeling.jpg") center;

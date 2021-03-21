@@ -249,6 +249,47 @@ nav a {
     display: grid;
     place-items: center;
 }
-#contact p {
-    font-size: 5rem;
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+.form-label {
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+#contact input, textarea {
+    display: block;
+    width: 100%;
+    padding: .5em;
+    margin-top: 1rem;
+}
+#contact input {
+    font-size: 2.2rem;
+}
+#contact textarea {
+    font-size: 1.8rem;
+    min-height: 100%;
+}
+#contact button {
+    width: auto;
+    margin: 1rem auto 0;
+    padding: 1em 2em;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--clr-white);
+    outline: solid 1px var(--clr-white);
+    cursor: pointer;
+    transition: 
+        background-color 250ms ease,
+        color 250ms ease,
+        outline-offset 250ms ease,
+        outline-width 250ms ease;
+}
+#contact button:hover {
+    background-color: var(--clr-dark-gray);
+    color: var(--clr-white);
+    outline-offset: -6px;
+    outline-width: 6px;
 }

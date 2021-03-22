@@ -242,7 +242,7 @@ nav a {
     1px 1px 0px var(--clr-light-gray);
 }
 .champion {
-    background: url("champion_snorkeling.jpg") center;
+    background: url("champion_snorkeling.webp") center;
     background-size: cover;
     border-radius: 1px;
     border: 0;

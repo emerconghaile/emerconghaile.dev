@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,27 +24,44 @@
     <meta property="twitter:url" content="https://emerconghaile.github.io/">
     <meta name="twitter:title" content="Emer Conghaile">
     <meta name="twitter:description" content="Cybersecurity Student & Web Developer">
-    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/over768px.css">
+    <link rel="stylesheet" href="styles/no-hover.css">
     <script src="https://kit.fontawesome.com/af5410f08d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
+    <input type="checkbox" autocomplete="off" id="play-audio-toggle">
+    <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
+    <div class="overlay">
+        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="audioPlay();videoPlay()">
+            <span class="bar-top">
+                <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
+                        class="small-overlay-text">with audio</span></span>
+                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
+                        audio</span></span>
+            </span>
+        </label>
+        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay()">
+            <span class="bar-bot">
+                <span class="grow-shrink-bot overlay-text no-hover">tap to enter<br><span
+                        class="small-overlay-text">muted</span></span>
+                <span class="grow-shrink-bot overlay-text hover">click to enter<br><span
+                        class="small-overlay-text">muted</span></span>
+            </span>
+        </label>
+    </div>
+    <!-- <header>
         <nav>
-            <a class= "nav-home home-link" onclick="myAudioFunction()" href="#">Emer Conghaile</a>
+            <a class="nav-home home-link" onclick="myAudioFunction()" href="#">Emer Conghaile</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
-    </header>
+    </header> -->
     <main>
-        <div class="construction">
-            <div>
-                <p>Site under construction</p>
-                <p>Use non-mobile device</p>
-            </div>
-        </div>
         <section id="about" class="main-container">
             <div class="about-title">
                 <h1>Emer Conghaile</h1>
@@ -54,30 +72,15 @@
                 <p>Currently seeking internships & employment</p>
             </div>
             <div class="about-icons">
-                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-github"></i></a>
                 <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
             </div>
         </section>
-        <div class="divider"></div>
+        <!-- <div class="divider"></div>
         <section id="portfolio" class="main-container github">
-            <div class="portfolio-divider">
-                <h2>GitHub</h2>
-                <div class="divider-grid">
-                    <div class="portfolio-item">
-                        <h3>Work in progress.</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Work in progress.</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Work in progress.</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Work in progress.</h3>
-                    </div>
-                </div>
-            </div>
             <div class="portfolio-divider websites">
                 <h2>Websites</h2>
                 <div class="divider-grid">
@@ -101,13 +104,8 @@
         </section>
         <div class="divider"></div>
         <section id="contact" class="main-container">
-            <form name="contact" method="POST" netlify>
-                <label class="form-label">Name: <input type="text" name="name" placeholder="Enter your name..." required></label>
-                <label class="form-label">Email: <input type="email" name="email" placeholder="Enter your email..." required></label>
-                <label class="form-label">Message: <textarea name="message" required></textarea></label>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+            <form name="contact" method="POST" netlify></form>
+        </section> -->
     </main>
     <script>
         var Audio = new Audio('bruh.mp3');
@@ -116,4 +114,5 @@
         }
     </script>
 </body>
+
 </html>

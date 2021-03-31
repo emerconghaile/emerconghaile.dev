@@ -48,6 +48,7 @@
                 }
             }
             function overlayScroll() {
+                document.getElementById("header").style.zIndex = "2";
                 document.getElementById("overlay").style.display = "none";
                 document.getElementById("body").style.overflowY = "scroll";
             }
@@ -84,7 +85,7 @@
             </span>
         </label>
     </div>
-    <header>
+    <header id="header">
         <nav class="nav-links">
             <a href="#about">About</a>
             <a href="#websites">Websites</a>

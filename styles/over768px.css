@@ -2,6 +2,18 @@
     body {
         overflow-y: hidden;
     }
+    .grow-shrink-top {
+        transition: transform 250ms ease;
+    }
+    .grow-shrink-top:hover {
+        transform: scale(1.1);
+    }
+    .grow-shrink-bot {
+        transition: transform 250ms ease;
+    }
+    .grow-shrink-bot:hover {
+        transform: scale(1.1);
+    }
     header {
         height: 100%;
         width: auto;
@@ -31,16 +43,7 @@
     .icon {
         font-size: 4rem;
     }
-    .grow-shrink-top {
-        transition: transform 250ms ease;
-    }
-    .grow-shrink-top:hover {
-        transform: scale(1.1);
-    }
-    .grow-shrink-bot {
-        transition: transform 250ms ease;
-    }
-    .grow-shrink-bot:hover {
-        transform: scale(1.1);
+    .main-container {
+        height: 100vh;
     }
 }

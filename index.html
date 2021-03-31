@@ -95,14 +95,27 @@
                     <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
                 </div>
             </section>
+            <div class="clip about-websites-divider"></div>   
             <section id="websites" class="main-container">
-
+                <h2>Websites</h2>
+                <div class="champion-snorkel websites-card">
+                </div>
+                <div class="7digits websites-card">
+                </div>
             </section>
+            <div class="clip websites-github-divider"></div>
             <section id="github" class="main-container">
-
+                <div class="clip websites-github-inner">stuff</div>
+                <h2>GitHub Projects</h2>
+                <div class="scan github-card">
+                </div>
+                <div class="sec-ftd-calc website-card">
+                </div>
             </section>
+            <div class="clip github-contact-divider"></div>
             <section id="contact" class="main-container">
-
+                <h2>Contact Me</h2>
+                <p>...and hire me.</p>
             </section>
         </div>
         <!-- 
@@ -123,7 +136,7 @@
             } else {
                 let headerHeight = document.querySelector('header');
                 headerHeight= headerHeight.offsetHeight;
-                document.getElementById('main').style.marginTop = headerHeight + "px";
+                document.getElementById('main').style.marginTop = (headerHeight * 1.5) + "px";
                 document.getElementById('main').style.marginLeft = "0px";
             }
         })

@@ -305,20 +305,20 @@ input[type=checkbox] {
 
 @keyframes text-grow {
     to {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 }
 
 @keyframes text-bar-down {
     to {
-        transform: translateY(25vh) scale(10, 0.2);
+        transform: translateY(25vh) scale(20, 0.2);
         background-color: black;
     }
 }
 
 @keyframes text-bar-up {
     to {
-        transform: translateY(-25vh) scale(10, 0.2);
+        transform: translateY(-25vh) scale(20, 0.2);
         background-color: black;
     }
 }
@@ -329,7 +329,7 @@ input[type=checkbox] {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-name: slide-up;
-    animation-delay: 950ms;
+    animation-delay: 900ms;
     animation-duration: var(--slide-duration);
 }
 
@@ -337,7 +337,7 @@ input[type=checkbox] {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-name: slide-down;
-    animation-delay: 950ms;
+    animation-delay: 900ms;
     animation-duration: var(--slide-duration);
 }
 
@@ -345,7 +345,7 @@ input[type=checkbox] {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-name: slide-up;
-    animation-delay: 950ms;
+    animation-delay: 900ms;
     animation-duration: var(--slide-duration);
 }
 
@@ -353,7 +353,7 @@ input[type=checkbox] {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-name: slide-down;
-    animation-delay: 950ms;
+    animation-delay: 900ms;
     animation-duration: var(--slide-duration);
 }
 

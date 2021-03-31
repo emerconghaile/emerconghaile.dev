@@ -327,6 +327,7 @@ input[type=checkbox] {
 
 #play-audio-toggle:checked~* .top-label {
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     animation-name: slide-up;
     animation-delay: 950ms;
     animation-duration: var(--slide-duration);
@@ -334,6 +335,7 @@ input[type=checkbox] {
 
 #play-audio-toggle:checked~* .bottom-label {
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     animation-name: slide-down;
     animation-delay: 950ms;
     animation-duration: var(--slide-duration);
@@ -341,6 +343,7 @@ input[type=checkbox] {
 
 #mute-audio-toggle:checked~* .top-label {
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     animation-name: slide-up;
     animation-delay: 950ms;
     animation-duration: var(--slide-duration);
@@ -348,6 +351,7 @@ input[type=checkbox] {
 
 #mute-audio-toggle:checked~* .bottom-label {
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     animation-name: slide-down;
     animation-delay: 950ms;
     animation-duration: var(--slide-duration);
@@ -355,13 +359,13 @@ input[type=checkbox] {
 
 @keyframes slide-up {
     to {
-        transform: translateY(-55vh);
+        transform: translateY(-100vh);
     }
 }
 
 @keyframes slide-down {
     to {
-        transform: translateY(55vh);
+        transform: translateY(100vh);
     }
 }
 

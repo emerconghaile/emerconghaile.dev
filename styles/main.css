@@ -113,6 +113,10 @@ input[type=checkbox] {
     z-index: -2;
 }
 
+#scroll-snap {
+    display: none;
+}
+
 .main-container {
     height: 100vh;
     width: 100%;
@@ -356,12 +360,12 @@ input[type=checkbox] {
     }
 }
 
-/* #play-audio-toggle:checked~* body {
-    overflow-y: scroll;
+#play-audio-toggle:checked~* #scroll-snap {
+    display: block;
 }
-#mute-audio-toggle:checked~* body {
-    overflow-y: scroll;
-} */
+#mute-audio-toggle:checked~* #scroll-snap {
+    display: block;
+}
 
 #scroll-snap {
     scroll-snap-type: y mandatory;

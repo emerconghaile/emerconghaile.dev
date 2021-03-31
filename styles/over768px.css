@@ -1,7 +1,10 @@
 @media screen and (min-width: 768px) {
-    /* main {
+    body {
+        overflow-y: hidden;
+    }
+    main {
         padding-left: 140px;
-    } */
+    }
     header {
         display: block;
         position: fixed;
@@ -9,68 +12,37 @@
         left: 0;
         height: 100%;
         width: auto;
-        background-color: var(--clr-white);
+        background: rgba(0,0,0,.5)
     }
     nav {
         height: 100%;
-        width: 140px;
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    nav a {
-        text-decoration: none;
-        color: var(--clr-dark-gray);
-        font-size: 2.5rem;
-        text-align: center;
-        padding: 1em;
-    }
-    .nav-home {
-        color: var(--clr-light-gray);
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid var(--clr-dark-gray);
-        writing-mode: vertical-lr;
-        border-left: 1px solid var(--clr-white);
-        border-right: 1px solid var(--clr-white);
-        border-top: 1px solid var(--clr-white);
-        outline: solid 1px var(--clr-white);
-        outline-offset: -1px;
-        transition: background-color 250ms ease, color 250ms ease, border-bottom 250ms ease, outline-offset 250ms ease, outline-width 250ms ease;
-    }
-    .nav-home:hover {
-        background-color: var(--clr-dark-gray);
-        border-bottom: 1px solid var(--clr-white);
-        outline-offset: -6px;
-        outline-width: 6px;
-    }
-    .nav-home:hover .home-link {
-        color: var(--clr-white);
     }
     .nav-links {
-        height: 60%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        border: 1px solid var(--clr-white);
+        justify-content: space-around;
     }
     .nav-links a {
-        outline: solid 0px var(--clr-white);
-        transition: background-color 250ms ease, color 250ms ease, outline-offset 250ms ease, outline-width 250ms ease;
+        text-decoration: none;
+        color: var(--clr-white);
+        font-size: 1rem;
+        text-align: center;
+        padding: 1em;
+        transition:
+            background-color 250ms ease-in-out,
+            color 250ms ease,
+            outline-offset 250ms ease-in-out,
+            outline-width 250ms ease-in-out;
     }
     .nav-links a:hover {
-        background-color: var(--clr-light-gray);
-        color: var(--clr-white);
+        outline: solid 0px var(--clr-white);
         outline-offset: -6px;
-        outline-width: 6px;
-    }
-    .nav-links a:focus {
-        background-color: var(--clr-light-gray);
-        color: var(--clr-white);
-        outline-offset: -6px;
-        outline-width: 6px;
+        outline-width: 3px;
     }
     .about-title h1 {
         font-size: 4rem;

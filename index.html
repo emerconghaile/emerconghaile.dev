@@ -39,7 +39,8 @@
             <span class="bar-top">
                 <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">with audio</span></span>
-                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with audio</span></span>
+                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
+                        audio</span></span>
             </span>
         </label>
         <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay()">
@@ -61,43 +62,45 @@
             video.play()
         }
     </script>
-    <!-- <header>
+    <header>
         <nav>
-            <a class="nav-home home-link" onclick="myAudioFunction()" href="#">Emer Conghaile</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
-    </header> -->
+    </header>
     <main>
         <div class="dim"></div>
-        <video muted loop playsinline preload="auto" poster="images/boreal-poster.webp" class="fullscreen bg-video" id="video">
-            <source src="videos/boreal-loop.webp" type="video/webp">
+        <video muted loop playsinline preload="auto" poster="images/boreal-poster.webp" class="fullscreen bg-video"
+            id="video">
+            <source src="videos/boreal-loop.webm" type="video/webm">
             <source src="videos/boreal-loop.mp4" type="video/mp4">
         </video>
-        <section id="about" class="main-container">
-            <div class="about-title">
-                <h1>Emer Conghaile</h1>
-            </div>
-            <div class="about-desc">
-                <p>Cybersecurity Student at Madison College</p>
-                <p>Self-taught Web Developer & Designer</p>
-                <p>Currently seeking internships & employment</p>
-            </div>
-            <div class="about-icons">
-                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-github"></i></a>
-                <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
-            </div>
-        </section>
-        <!-- <div class="divider"></div>
-        <section class="main-container">
-            
-        </section>
+        <div id="scroll-snap">
+            <section id="about" class="main-container">
+                <div class="about-title">
+                    <h1>Emer Conghaile</h1>
+                </div>
+                <div class="about-desc">
+                    <p>Cybersecurity Student at Madison College</p>
+                    <p>Self-taught Web Developer & Designer</p>
+                    <p>Currently seeking internships & employment</p>
+                </div>
+                <div class="about-icons">
+                    <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
+                            class="icon fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
+                            class="icon fab fa-github"></i></a>
+                    <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
+                </div>
+            </section>
+            <section id="portfolio" class="main-container">
+
+            </section>
+        </div>
+        <!-- 
         <div class="divider"></div>
         <section id="contact" class="main-container">
             <form name="contact" method="POST" netlify></form>

@@ -63,7 +63,7 @@
                     doucment.getElementById('main').style.marginTop = "0px";
                 } else {
                     let headerHeight = document.querySelector('header');
-                    headerHeight= headerHeight.offsetHeight;
+                    headerHeight = headerHeight.offsetHeight;
                     document.getElementById('main').style.marginTop = headerHeight + "px";
                     document.getElementById('main').style.marginLeft = "0px";
                 }
@@ -72,7 +72,7 @@
                 document.getElementById("overlay").style.display = "none";
                 document.getElementById("body").style.overflowY = "scroll";
             }
-            setTimeout(() => {overlayScroll() }, 1400);
+            setTimeout(() => { overlayScroll() }, 1400);
             headerOffset();
         }
         function audioPlay() {
@@ -118,10 +118,8 @@
                 <p>I pride myself in my work</p>
             </div>
             <div class="about-div about-icons">
-                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-github"></i></a>
                 <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
             </div>
         </section>
@@ -144,17 +142,26 @@
         </section>
         <div class="clip github-contact-divider"></div>
         <section id="contact" class="main-container">
-            <h2>Contact Me</h2>
-            <p>...and hire me.</p>
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>I am for hire!</p>
+            </div>
+            <form id="form" name="contact" method="POST" netlify>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="fname" placeholder="Type your name here..." required>
+
+                <label for="fname">Email</label>
+                <input type="email" id="name" name="fname" placeholder="Type your email here..." required>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="min-height:200px"></textarea>
+
+                <button type="submit" for="form" value="Submit">SUBMIT</button>
+            </form>
         </section>
-        <!-- 
-        <div class="divider"></div>
-        <section id="contact" class="main-container">
-            <form name="contact" method="POST" netlify></form>
-        </section> -->
     </main>
     <script>
-        window.addEventListener("resize", function() {
+        window.addEventListener("resize", function () {
             if (window.matchMedia("(min-width:768px)").matches) {
                 let headerWidth = document.querySelector('header');
                 headerWidth = headerWidth.offsetWidth;
@@ -164,7 +171,7 @@
                 about.scrollIntoView(true);
             } else {
                 let headerHeight = document.querySelector('header');
-                headerHeight= headerHeight.offsetHeight;
+                headerHeight = headerHeight.offsetHeight;
                 document.getElementById('main').style.marginTop = headerHeight + "px";
                 document.getElementById('main').style.marginLeft = "0";
             }

@@ -36,6 +36,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    font-family: "Inconsolata", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -234,6 +235,13 @@ input[type=checkbox] {
     background: rgba(0, 0, 0, 0.7);
 }
 
+#websites h2 {
+    font-size: 2.5rem;
+}
+#github h2 {
+    font-size: 2.5rem;
+}
+
 #websites {
     /* height: 400px; */
     padding-top: 2rem;
@@ -270,9 +278,90 @@ input[type=checkbox] {
 }
 
 #contact {
-    /* height: 400px; */
-    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: max-content;
+}
+
+.contact-info {
     text-align: center;
+    margin-bottom: 3rem;
+}
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+}
+
+#contact form {
+    min-width: 300px;
+    margin: 0 auto;
+}
+#contact form label,input,textarea {
+    display: block;
+}
+
+#contact form label {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+#contact form input,textarea {
+    margin-bottom: 2rem;
+    padding: 1em;
+    width: 100%;
+    background: rgba(255,255,255,.6);
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+#contact form button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: .5em 2em;
+    background:rgba(255,255,255,.6);
+    width: auto;
+    min-width: 100px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+}
+
+#contact form input:hover,textarea:hover {
+    background: rgba(0,0,0,.6);
+    color: white;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+    outline: none;
+}
+
+#contact form input:focus,textarea:focus {
+    background: rgba(0,0,0,.9);
+    color: white;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.9);
+    outline: none;
+}
+
+#contact form button:hover,button:focus  {
+    background: rgba(0,0,0,.9);
+    color: white;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.9);
+    outline: none;
+}
+
+#contact form button:focus,button:focus {
+    background: rgba(0,0,0,.9);
+    color: white;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.9);
+    outline: none;
 }
 
 /* .portfolio-item {

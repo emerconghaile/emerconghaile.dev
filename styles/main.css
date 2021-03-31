@@ -355,19 +355,13 @@ input[type=checkbox] {
 
 @keyframes slide-up {
     to {
-        transform: translateY(-55vh);
+        transform: translateY(-100vh);
     }
 }
 
 @keyframes slide-down {
     to {
-        transform: translateY(55vh);
-    }
-}
-
-@keyframes fade {
-    to {
-        opacity: 0;
+        transform: translateY(100vh);
     }
 }
 

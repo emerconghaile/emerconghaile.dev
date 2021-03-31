@@ -31,11 +31,12 @@
     <script src="https://kit.fontawesome.com/af5410f08d.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="body">
     <input type="checkbox" autocomplete="off" id="play-audio-toggle">
     <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
-    <div class="overlay">
-        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="videoPlay();audioPlay()">
+    <div id="overlay" class="overlay">
+        <label class="top-label" for="play-audio-toggle" id="play-audio"
+            onclick="overlayToggle();videoPlay();audioPlay()">
             <span class="bar-top">
                 <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">with audio</span></span>
@@ -43,7 +44,7 @@
                         audio</span></span>
             </span>
         </label>
-        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay()">
+        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="overlayToggle();videoPlay()">
             <span class="bar-bot">
                 <span class="grow-shrink-bot overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">muted</span></span>
@@ -53,6 +54,29 @@
         </label>
     </div>
     <script>
+        function overlayToggle() {
+            function headerOffset() {
+                if (window.matchMedia("(min-width:768px)").matches) {
+                    let headerWidth = document.querySelector('header');
+                    headerWidth = headerWidth.offsetWidth;
+                    document.getElementById('main').style.marginLeft = headerWidth + "px";
+                    doucment.getElementById('main').style.marginTop = "0px";
+                    const element = document.getElementById('about');
+                    about.scrollIntoView(true);
+                } else {
+                    let headerHeight = document.querySelector('header');
+                    headerHeight= headerHeight.offsetHeight;
+                    document.getElementById('main').style.marginTop = (headerHeight * 1.5) + "px";
+                    document.getElementById('main').style.marginLeft = "0px";
+                }
+            }
+            function overlayScroll() {
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("body").style.overflowY = "scroll";
+            }
+            setTimeout(() => {overlayScroll() }, 1400);
+            headerOffset();
+        }
         function audioPlay() {
             let audio = document.getElementById("audio");
             audio.play();
@@ -77,47 +101,54 @@
             <source src="videos/boreal-loop.webm" type="video/webm">
             <source src="videos/boreal-loop.mp4" type="video/mp4">
         </video>
-        <div id="scroll-snap">
-            <section id="about" class="main-container">
-                <div class="about-title">
-                    <h1>Emer Conghaile</h1>
-                </div>
-                <div class="about-desc">
-                    <p>Cybersecurity Student at Madison College</p>
-                    <p>Self-taught Web Developer & Designer</p>
-                    <p>Currently seeking internships & employment</p>
-                </div>
-                <div class="about-icons">
-                    <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
-                            class="icon fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
-                            class="icon fab fa-github"></i></a>
-                    <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
-                </div>
-            </section>
-            <div class="clip about-websites-divider"></div>   
-            <section id="websites" class="main-container">
-                <h2>Websites</h2>
-                <div class="champion-snorkel websites-card">
-                </div>
-                <div class="7digits websites-card">
-                </div>
-            </section>
-            <div class="clip websites-github-divider"></div>
-            <section id="github" class="main-container">
-                <div class="clip websites-github-inner">stuff</div>
-                <h2>GitHub Projects</h2>
-                <div class="scan github-card">
-                </div>
-                <div class="sec-ftd-calc website-card">
-                </div>
-            </section>
-            <div class="clip github-contact-divider"></div>
-            <section id="contact" class="main-container">
-                <h2>Contact Me</h2>
-                <p>...and hire me.</p>
-            </section>
-        </div>
+        <section id="about" class="main-container">
+            <div class="about-div about-title">
+                <h1>Emer Conghaile</h1>
+            </div>
+            <div class="about-div about-h2">
+                <h2>Web Developer & Designer</h2>
+                <h2>Cybersecurity Student at Madison College</h2>
+            </div>
+            <div class="about-div about-desc">
+                <ul>
+                    <li>Front-end</li>
+                    <li>Back-end</li>
+                    <li>SEO</li>
+                    <li>Beautiful Designs</li>
+                    <li>Fast Load Times</li>
+                </ul>
+                <p>I pride myself in my work</p>
+            </div>
+            <div class="about-div about-icons">
+                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-github"></i></a>
+                <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
+            </div>
+        </section>
+        <div class="clip about-websites-divider"></div>
+        <section id="websites" class="main-container">
+            <h2>Websites</h2>
+            <div class="champion-snorkel websites-card">
+            </div>
+            <div class="7digits websites-card">
+            </div>
+        </section>
+        <div class="clip websites-github-divider"></div>
+        <section id="github" class="main-container">
+            <div class="clip websites-github-inner">stuff</div>
+            <h2>GitHub Projects</h2>
+            <div class="scan github-card">
+            </div>
+            <div class="sec-ftd-calc website-card">
+            </div>
+        </section>
+        <div class="clip github-contact-divider"></div>
+        <section id="contact" class="main-container">
+            <h2>Contact Me</h2>
+            <p>...and hire me.</p>
+        </section>
         <!-- 
         <div class="divider"></div>
         <section id="contact" class="main-container">
@@ -130,16 +161,17 @@
                 let headerWidth = document.querySelector('header');
                 headerWidth = headerWidth.offsetWidth;
                 document.getElementById('main').style.marginLeft = headerWidth + "px";
-                doucment.getElementById('main').style.marginTop = "0px";
+                doucment.getElementById('main').style.marginTop = "0";
                 const element = document.getElementById('about');
                 about.scrollIntoView(true);
             } else {
                 let headerHeight = document.querySelector('header');
                 headerHeight= headerHeight.offsetHeight;
                 document.getElementById('main').style.marginTop = (headerHeight * 1.5) + "px";
-                document.getElementById('main').style.marginLeft = "0px";
+                document.getElementById('main').style.marginLeft = "0";
             }
         })
+        // audio play function
         // let Audio = new Audio('bruh.mp3');
         // function myAudioFunction() {
         //     Audio.play();

@@ -1,7 +1,4 @@
 @media screen and (min-width: 768px) {
-    body {
-        overflow-y: hidden;
-    }
     .grow-shrink-top {
         transition: transform 250ms ease;
     }
@@ -33,17 +30,27 @@
         outline-offset: -6px;
         outline-width: 3px;
     }
+    #about {
+        padding: 2em 0;
+    }
     .about-title h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
+    }
+    .about-h2 h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .about-desc ul {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
     }
     .about-desc p {
         font-size: 2rem;
-        line-height: 3rem;
     }
     .icon {
         font-size: 4rem;
     }
     .main-container {
-        height: 100vh;
+        min-height: 100vh;
     }
 }

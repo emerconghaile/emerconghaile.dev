@@ -135,8 +135,8 @@ input[type=checkbox] {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 110vh;
+    min-width: 110vw;
     z-index: -1;
     background: rgba(0, 0, 0, 0.3);
 }

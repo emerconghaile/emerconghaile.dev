@@ -40,12 +40,11 @@
     <input type="checkbox" autocomplete="off" id="play-audio-toggle">
     <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
     <div class="overlay">
-        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="audioPlay();videoPlay()">
+        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="videoPlay();audioPlay()">
             <span class="bar-top">
                 <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">with audio</span></span>
-                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
-                        audio</span></span>
+                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with audio</span></span>
             </span>
         </label>
         <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay()">
@@ -57,6 +56,16 @@
             </span>
         </label>
     </div>
+    <script>
+        function audioPlay() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+        function videoPlay() {
+            var video = document.getElementById("video");
+            video.play()
+        }
+    </script>
     <!-- <header>
         <nav>
             <a class="nav-home home-link" onclick="myAudioFunction()" href="#">Emer Conghaile</a>
@@ -68,6 +77,11 @@
         </nav>
     </header> -->
     <main>
+        <div class="dim"></div>
+        <video muted loop playsinline preload="auto" class="fullscreen bg-video" id="video">
+            <source src="videos/boreal-loop.webp" type="video/webp">
+            <source src="videos/boreal-loop.mp4" type="video/mp4">
+        </video>
         <section id="about" class="main-container">
             <div class="about-title">
                 <h1>Emer Conghaile</h1>
@@ -86,27 +100,8 @@
             </div>
         </section>
         <!-- <div class="divider"></div>
-        <section id="portfolio" class="main-container github">
-            <div class="portfolio-divider websites">
-                <h2>Websites</h2>
-                <div class="divider-grid">
-                    <a class="portfolio-item has-item champion" href="https://championsnorkel.com/" target="_blank" rel="noopener noreferrer">
-                        <div>
-                            <h3>Champion Snorkeling</h3>
-                            <p>championsnorkeling.com</p>
-                        </div>
-                    </a>
-                    <div class="portfolio-item">
-                        <h3>Coming soon.</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Coming soon.</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Coming soon.</h3>
-                    </div>
-                </div>
-            </div>
+        <section class="main-container">
+            
         </section>
         <div class="divider"></div>
         <section id="contact" class="main-container">

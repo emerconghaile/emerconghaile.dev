@@ -13,7 +13,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: var(--clr-dark-gray);
-    border-left: 1px solid var(--clr-white);
+    border: 1px solid var(--clr-white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,8 +100,18 @@ input[type=checkbox] {
     min-width: 100vw;
 }
 
-.bg-video {
+.dim {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.bg-video {
+    z-index: -2;
 }
 
 .main-container {
@@ -154,7 +164,7 @@ input[type=checkbox] {
 
 .icon {
     font-size: 2.5rem;
-    padding: 1em;
+    padding: 0 1em;
     transition: all 250ms ease;
 }
 
@@ -166,46 +176,7 @@ input[type=checkbox] {
     border-bottom: 1px solid var(--clr-white);
 }
 
-#portfolio {
-    display: flex;
-}
-
-.portfolio-divider {
-    width: 50%;
-    height: 100%;
-    display: inline;
-}
-
-.portfolio-divider:first-of-type {
-    border-right: 1px solid var(--clr-white);
-}
-
-.portfolio-divider h2 {
-    font-size: 5rem;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-divider p {
-    font-size: 2rem;
-}
-
-.divider-grid {
-    height: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-    padding: 0 2rem 2rem;
-}
-
-.divider-grid a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.portfolio-item {
+/* .portfolio-item {
     place-content: center;
     display: flex;
     flex-direction: column;
@@ -222,27 +193,12 @@ input[type=checkbox] {
     outline: 0px solid var(--clr-white);
 }
 
-.portfolio-item h3 {
-    font-size: 3rem;
-    margin-bottom: .5rem;
-}
-
-.has-item h3 {
-    text-shadow: -1px -1px 0px var(--clr-dark-gray), -1px 1px 0px var(--clr-dark-gray), 1px -1px 0px var(--clr-dark-gray), 1px 1px 0px var(--clr-dark-gray);
-}
-
-.has-item p {
-    font-size: 2rem;
-    color: var(--clr-white);
-    text-shadow: -1px -1px 0px var(--clr-light-gray), -1px 1px 0px var(--clr-light-gray), 1px -1px 0px var(--clr-light-gray), 1px 1px 0px var(--clr-light-gray);
-}
-
 .champion {
     background: url("images/champion_snorkeling.webp") center;
     background-size: cover;
     border-radius: 1px;
     border: 0;
-}
+} */
 
 /* custom animation time properties */
 

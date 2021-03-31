@@ -24,7 +24,9 @@
     <meta property="twitter:url" content="https://emerconghaile.github.io/">
     <meta name="twitter:title" content="Emer Conghaile">
     <meta name="twitter:description" content="Cybersecurity Student & Web Developer">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" as="style">
+    <link rel="preload" href="videos/boreal-loop.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="videos/boreal-loop.webm" as="video" type="video/webm">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/over768px.css">
     <link rel="stylesheet" href="styles/no-hover.css">
@@ -55,10 +57,10 @@
             setTimeout(() => { overlayScroll() }, 1400);
             headerOffset();
         }
-        function audioPlay() {
-            let audio = document.getElementById("audio");
-            audio.play();
-        }
+        // function audioPlay() {
+        //     let audio = document.getElementById("audio");
+        //     audio.play();
+        // }
         function videoPlay() {
             let video = document.getElementById("video");
             video.play()
@@ -68,7 +70,7 @@
     <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
     <div id="overlay" class="overlay">
         <label class="top-label" for="play-audio-toggle" id="play-audio"
-            onclick="videoPlay();audioPlay();overlayToggle()">
+            onclick="videoPlay();overlayToggle()">
             <span class="bar-top">
                 <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">with audio</span></span>
@@ -151,10 +153,10 @@
             </div>
             <form id="form" name="contact" method="POST" netlify>
                 <label for="name">Name</label>
-                <input type="text" id="name" name="fname" placeholder="Type your name here..." required>
+                <input type="text" id="name" name="name" placeholder="Type your name here..." required>
 
-                <label for="fname">Email</label>
-                <input type="email" id="name" name="fname" placeholder="Type your email here..." required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Type your email here..." required>
 
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.."
@@ -170,7 +172,7 @@
                 let headerWidth = document.querySelector('header');
                 headerWidth = headerWidth.offsetWidth;
                 document.getElementById('main').style.marginLeft = headerWidth + "px";
-                doucment.getElementById('main').style.marginTop = "0";
+                document.getElementById('main').style.marginTop = "0";
                 const element = document.getElementById('about');
                 about.scrollIntoView(true);
             } else {

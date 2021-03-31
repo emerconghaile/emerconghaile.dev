@@ -321,6 +321,10 @@ input[type=checkbox] {
     font-size: 1rem;
     border: none;
     border-radius: 3px;
+    transition: 
+        background-color 250ms ease,
+        color 250ms ease,
+        box-shadow 250ms ease;
 }
 
 #contact form button {
@@ -334,31 +338,35 @@ input[type=checkbox] {
     font-size: 1.5rem;
     border: none;
     border-radius: 3px;
+    transition: 
+        background-color 250ms ease,
+        color 250ms ease,
+        box-shadow 250ms ease;
 }
 
 #contact form input:hover,textarea:hover {
-    background: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.6);
     color: white;
     box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
     outline: none;
 }
 
 #contact form input:focus,textarea:focus {
-    background: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.9);
     color: white;
     box-shadow: 0 0 5px 5px rgba(0,0,0,.9);
     outline: none;
 }
 
 #contact form button:hover,button:focus  {
-    background: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.9);
     color: white;
     box-shadow: 0 0 2px 2px rgba(0,0,0,.9);
     outline: none;
 }
 
 #contact form button:focus,button:focus {
-    background: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.9);
     color: white;
     box-shadow: 0 0 5px 5px rgba(0,0,0,.9);
     outline: none;

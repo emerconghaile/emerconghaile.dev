@@ -2,24 +2,9 @@
     body {
         overflow-y: hidden;
     }
-    main {
-        padding-left: 140px;
-    }
     header {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
         height: 100%;
         width: auto;
-        background: rgba(0,0,0,.5)
-    }
-    nav {
-        height: 100%;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
     .nav-links {
         height: 100%;
@@ -28,18 +13,10 @@
         justify-content: space-around;
     }
     .nav-links a {
-        text-decoration: none;
-        color: var(--clr-white);
-        font-size: 1rem;
-        text-align: center;
-        padding: 1em;
-        transition:
-            background-color 250ms ease-in-out,
-            color 250ms ease,
-            outline-offset 250ms ease-in-out,
-            outline-width 250ms ease-in-out;
+        font-size: 1.2rem;
+        transition: outline-offset 250ms ease-in-out, outline-width 250ms ease-in-out;
     }
-    .nav-links a:hover {
+    .nav-links a:focus {
         outline: solid 0px var(--clr-white);
         outline-offset: -6px;
         outline-width: 3px;
@@ -53,5 +30,17 @@
     }
     .icon {
         font-size: 4rem;
+    }
+    .grow-shrink-top {
+        transition: transform 250ms ease;
+    }
+    .grow-shrink-top:hover {
+        transform: scale(1.1);
+    }
+    .grow-shrink-bot {
+        transition: transform 250ms ease;
+    }
+    .grow-shrink-bot:hover {
+        transform: scale(1.1);
     }
 }

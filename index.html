@@ -54,25 +54,23 @@
     </div>
     <script>
         function audioPlay() {
-            var audio = document.getElementById("audio");
+            let audio = document.getElementById("audio");
             audio.play();
         }
         function videoPlay() {
-            var video = document.getElementById("video");
+            let video = document.getElementById("video");
             video.play()
         }
     </script>
     <header>
-        <nav>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#website">Website<br>Portfolio</a>
-                <a href="#github">Github<br>Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#websites">Websites</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <div class="dim"></div>
         <video muted loop playsinline preload="auto" poster="images/boreal-poster.webp" class="fullscreen bg-video"
             id="video">
@@ -97,7 +95,7 @@
                     <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
                 </div>
             </section>
-            <section id="website" class="main-container">
+            <section id="websites" class="main-container">
 
             </section>
             <section id="github" class="main-container">
@@ -114,10 +112,25 @@
         </section> -->
     </main>
     <script>
-        var Audio = new Audio('bruh.mp3');
-        function myAudioFunction() {
-            Audio.play();
-        }
+        window.addEventListener("resize", function() {
+            if (window.matchMedia("(min-width:768px)").matches) {
+                let headerWidth = document.querySelector('header');
+                headerWidth = headerWidth.offsetWidth;
+                document.getElementById('main').style.marginLeft = headerWidth + "px";
+                doucment.getElementById('main').style.marginTop = "0px";
+                const element = document.getElementById('about');
+                about.scrollIntoView(true);
+            } else {
+                let headerHeight = document.querySelector('header');
+                headerHeight= headerHeight.offsetHeight;
+                document.getElementById('main').style.marginTop = headerHeight + "px";
+                document.getElementById('main').style.marginLeft = "0px";
+            }
+        })
+        // let Audio = new Audio('bruh.mp3');
+        // function myAudioFunction() {
+        //     Audio.play();
+        // }
     </script>
 </body>
 

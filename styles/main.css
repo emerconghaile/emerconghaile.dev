@@ -8,15 +8,15 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: white;
+    background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,.8);
+    background: var(--clr-white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,1);
+    background: white;
 }
 
 :root {

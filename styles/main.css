@@ -342,6 +342,7 @@ input[type=checkbox] {
         background-color 250ms ease,
         color 250ms ease,
         box-shadow 250ms ease;
+    margin-bottom: 2rem;
 }
 
 #contact form input:hover,textarea:hover {

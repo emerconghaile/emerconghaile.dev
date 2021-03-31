@@ -61,8 +61,6 @@
                     headerWidth = headerWidth.offsetWidth;
                     document.getElementById('main').style.marginLeft = headerWidth + "px";
                     doucment.getElementById('main').style.marginTop = "0px";
-                    const element = document.getElementById('about');
-                    about.scrollIntoView(true);
                 } else {
                     let headerHeight = document.querySelector('header');
                     headerHeight= headerHeight.offsetHeight;
@@ -73,6 +71,7 @@
             function overlayScroll() {
                 document.getElementById("overlay").style.display = "none";
                 document.getElementById("body").style.overflowY = "scroll";
+                doctment.getElementById("body").style.overflowX = "none";
             }
             setTimeout(() => {overlayScroll() }, 1400);
             headerOffset();

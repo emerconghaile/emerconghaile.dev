@@ -32,27 +32,6 @@
 </head>
 
 <body id="body">
-    <input type="checkbox" autocomplete="off" id="play-audio-toggle">
-    <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
-    <div id="overlay" class="overlay">
-        <label class="top-label" for="play-audio-toggle" id="play-audio"
-            onclick="overlayToggle();videoPlay();audioPlay()">
-            <span class="bar-top">
-                <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
-                        class="small-overlay-text">with audio</span></span>
-                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
-                        audio</span></span>
-            </span>
-        </label>
-        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="overlayToggle();videoPlay()">
-            <span class="bar-bot">
-                <span class="grow-shrink-bot overlay-text no-hover">tap to enter<br><span
-                        class="small-overlay-text">muted</span></span>
-                <span class="grow-shrink-bot overlay-text hover">click to enter<br><span
-                        class="small-overlay-text">muted</span></span>
-            </span>
-        </label>
-    </div>
     <script>
         function overlayToggle() {
             function headerOffset() {
@@ -84,6 +63,27 @@
             video.play()
         }
     </script>
+    <input type="checkbox" autocomplete="off" id="play-audio-toggle">
+    <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
+    <div id="overlay" class="overlay">
+        <label class="top-label" for="play-audio-toggle" id="play-audio"
+            onclick="videoPlay();audioPlay();overlayToggle()">
+            <span class="bar-top">
+                <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
+                        class="small-overlay-text">with audio</span></span>
+                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
+                        audio</span></span>
+            </span>
+        </label>
+        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay();overlayToggle()">
+            <span class="bar-bot">
+                <span class="grow-shrink-bot overlay-text no-hover">tap to enter<br><span
+                        class="small-overlay-text">muted</span></span>
+                <span class="grow-shrink-bot overlay-text hover">click to enter<br><span
+                        class="small-overlay-text">muted</span></span>
+            </span>
+        </label>
+    </div>
     <header>
         <nav class="nav-links">
             <a href="#about">About</a>
@@ -118,8 +118,10 @@
                 <p>I pride myself in my work</p>
             </div>
             <div class="about-div about-icons">
-                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
+                        class="icon fab fa-github"></i></a>
                 <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
             </div>
         </section>
@@ -154,7 +156,8 @@
                 <input type="email" id="name" name="fname" placeholder="Type your email here..." required>
 
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="min-height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                    style="min-height:200px"></textarea>
 
                 <button type="submit" for="form" value="Submit">SUBMIT</button>
             </form>

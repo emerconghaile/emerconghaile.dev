@@ -243,7 +243,6 @@ input[type=checkbox] {
 
 #websites {
     /* height: 400px; */
-    padding-top: 2rem;
     background: rgba(0, 0, 0, 0.7);
     text-align: center;
 }
@@ -256,7 +255,6 @@ input[type=checkbox] {
 #github {
     position: relative;
     /* height: 400px; */
-    padding-top: 2rem;
     background: rgba(255, 255, 255, 0.8);
     color: black;
     text-align: center;

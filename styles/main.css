@@ -1,9 +1,7 @@
-:root {
-    --header-height: 64px;
-    --clr-white: #f2f2f2;
-    --clr-light-gray: #616161;
-    --clr-dark-gray: #333;
-}
+/* @font-face {
+    font-family: "Inconsolata";
+    src: "../fonts/static/Inconsolata_Condensed-Light.ttf" format("truetype");
+} */
 
 ::-webkit-scrollbar {
     width: 15px;
@@ -15,16 +13,22 @@
 
 ::-webkit-scrollbar-thumb {
     background: var(--clr-dark-gray);
-    border: 1px solid var(--clr-white);
+    border-left: 1px solid var(--clr-white);
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--clr-light-gray);
 }
 
+:root {
+    --header-height: 64px;
+    --clr-white: #f2f2f2;
+    --clr-light-gray: #616161;
+    --clr-dark-gray: #333;
+}
+
 html {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -42,6 +46,7 @@ body {
     background: black;
     height: 100%;
     width: 100%;
+    font-family: "Inconsolata";
 }
 
 input[type=checkbox] {

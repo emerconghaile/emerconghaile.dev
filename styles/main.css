@@ -1,24 +1,23 @@
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: black;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--clr-white);
+    background: rgba(255,255,255,.4);
+    border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: rgba(255,255,255,.5);
 }
 
 :root {
-    --header-height: 64px;
     --clr-white: #f2f2f2;
-    --clr-light-gray: #616161;
-    --clr-dark-gray: #333;
 }
 
 html {

@@ -444,30 +444,6 @@ video::-webkit-media-controls {
     outline: none;
 }
 
-/* .portfolio-item {
-    place-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    margin: 1rem;
-    outline: 1rem solid rgba(0, 0, 0, 0);
-    transition: outline 300ms ease, border 300ms ease;
-}
-
-.portfolio-item:hover {
-    border: 1rem solid var(--clr-white);
-    outline: 0px solid var(--clr-white);
-}
-
-.champion {
-    background: url("images/champion_snorkeling.webp") center;
-    background-size: cover;
-    border-radius: 1px;
-    border: 0;
-} */
-
 /* custom animation time properties */
 
 .overlay {

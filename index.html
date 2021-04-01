@@ -24,7 +24,8 @@
     <meta property="twitter:url" content="https://emerconghaile.github.io/">
     <meta name="twitter:title" content="Emer Conghaile">
     <meta name="twitter:description" content="Cybersecurity Student & Web Developer">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preload" href="videos/boreal-loop.mp4" as="video" type="video/mp4">
     <link rel="preload" href="videos/boreal-loop.webm" as="video" type="video/webm">
     <link rel="stylesheet" href="styles/main.css">
@@ -45,7 +46,7 @@
                 } else {
                     let headerHeight = document.querySelector('header');
                     headerHeight = headerHeight.offsetHeight;
-                    document.getElementById('main').style.marginTop = headerHeight + "px";
+                    document.getElementById('main').style.marginTop = (headerHeight + 32) + "px";
                     document.getElementById('main').style.marginLeft = "0px";
                 }
             }
@@ -69,8 +70,7 @@
     <input type="checkbox" autocomplete="off" id="play-audio-toggle">
     <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
     <div id="overlay" class="overlay">
-        <label class="top-label" for="play-audio-toggle" id="play-audio"
-            onclick="videoPlay();overlayToggle()">
+        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="videoPlay();overlayToggle()">
             <span class="bar-top">
                 <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
                         class="small-overlay-text">with audio</span></span>
@@ -104,36 +104,59 @@
         </video>
         <section id="about" class="main-container">
             <div class="about-div about-title">
-                <h1>Emer Conghaile</h1>
+                <h1 class="text-pop">Emer Conghaile</h1>
             </div>
             <div class="about-div about-h2">
-                <h2>Web Developer & Designer</h2>
-                <h2>Cybersecurity Student at Madison College</h2>
+                <h2 class="text-pop">Web Developer & Designer</h2>
+                <h2 class="text-pop">Cybersecurity Student</h2>
             </div>
             <div class="about-div about-desc">
-                <ul>
-                    <li>Front-end</li>
-                    <li>Back-end</li>
-                    <li>SEO</li>
-                    <li>Beautiful Designs</li>
+                <ul class="text-pop">
+                    <li>Search Engine Optimization (SEO)</li>
+                    <li>Beautiful & Custom Designs</li>
+                    <li>Attention To Detail</li>
                     <li>Fast Load Times</li>
+                    <li>Front-End</li>
+                    <li>Back-End</li>
+                    <li>and more...</li>
                 </ul>
-                <p>I pride myself in my work</p>
+                <p class="text-pop">I pride myself in my work</p>
             </div>
             <div class="about-div about-icons">
                 <a href="https://www.linkedin.com/in/emerconghaile/" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-linkedin-in"></i></a>
+                        class="text-pop icon fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/emerconghaile" target="_blank" rel="noopener noreferrer"><i
-                        class="icon fab fa-github"></i></a>
-                <a href="mailto:emerconn7@gmail.com"><i class="icon far fa-envelope"></i></a>
+                        class="text-pop icon fab fa-github"></i></a>
+                <a href="mailto:emerconn7@gmail.com"><i class="text-pop icon far fa-envelope"></i></a>
             </div>
         </section>
         <div class="clip about-websites-divider"></div>
         <section id="websites" class="main-container">
             <h2>Websites</h2>
-            <div class="champion-snorkel websites-card">
+            <div class="website-desc">
+                <p>
+                    I began to teach myself web development in February / 2021. Though not long, my skills have improved
+                    quickly. By constantly challening myself, staying eager to learn more, and taking the utmost pride
+                    in my work, I can confidently say that I will exceed your vision and standards. I love web design
+                    and I love creating a beautiful & efficient reult every time. By hiring me you are
+                    not only getting the best bang for your buck, but you are also supporting the dreams of an
+                    independent college student.
+                </p>
+                <p>(the websites are ordered by which I made first)</p>
             </div>
-            <div class="7digits websites-card">
+            <div class="card-container">
+                <a href="https://www.championsnorkel.com/" target="_blank" rel="noopener noreferrer">
+                    <div class="champion-snorkel websites-card">
+                        <p class="website-name">Champion Snorkeling</p>
+                        <p class="website-url">championsnorkeling.com</p>
+                    </div>
+                </a>
+                <a href="https://www.7digits.cf/" target="_blank" rel="noopener noreferrer">
+                    <div class="seven-digits websites-card">
+                        <p class="website-name">7 digits</p>
+                        <p class="website-url">7digits.cf</p>
+                    </div>
+                </a>
             </div>
         </section>
         <div class="clip websites-github-divider"></div>
@@ -148,20 +171,17 @@
         <div class="clip github-contact-divider"></div>
         <section id="contact" class="main-container">
             <div class="contact-info">
-                <h2>Contact Me</h2>
-                <p>I am for hire!</p>
+                <h2 class="text-pop">Contact Me</h2>
+                <p class="text-pop">I am for hire!</p>
             </div>
             <form id="form" name="contact" method="POST" netlify>
-                <label for="name">Name</label>
+                <label for="name" class="text-pop">Name</label>
                 <input type="text" id="name" name="name" placeholder="Type your name here..." required>
-
-                <label for="email">Email</label>
+                <label for="email" class="text-pop">Email</label>
                 <input type="email" id="email" name="email" placeholder="Type your email here..." required>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.."
-                    style="min-height:200px" required></textarea>
-
+                <label for="subject" class="text-pop">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="min-height:200px"
+                    required></textarea>
                 <button type="submit" for="form" value="Submit">SUBMIT</button>
             </form>
         </section>
@@ -178,7 +198,7 @@
             } else {
                 let headerHeight = document.querySelector('header');
                 headerHeight = headerHeight.offsetHeight;
-                document.getElementById('main').style.marginTop = headerHeight + "px";
+                document.getElementById('main').style.marginTop = (headerHeight + 32) + "px";
                 document.getElementById('main').style.marginLeft = "0";
             }
         })

@@ -150,7 +150,7 @@ video::-webkit-media-controls {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2rem;
+    padding: 0 2rem;
 }
 
 .about-div {

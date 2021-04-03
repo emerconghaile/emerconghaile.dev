@@ -56,7 +56,7 @@
                 document.getElementById("body").style.overflowY = "scroll";
             }
             setTimeout(() => { overlayScroll() }, 1200);
-            headerOffset();
+            setTimeout(() => { headerOffset() }, 1200);
         }
         // function audioPlay() {
         //     let audio = document.getElementById("audio");
@@ -178,19 +178,28 @@
         </section>
     </main>
     <script>
-        window.addEventListener("resize", function () {
-            if (window.matchMedia("(min-width:768px)").matches) {
-                let headerWidth = document.querySelector('header');
-                headerWidth = headerWidth.offsetWidth;
-                document.getElementById('main').style.marginLeft = headerWidth + "px";
-                document.getElementById('main').style.marginTop = "0";
-                const element = document.getElementById('about');
-                about.scrollIntoView(true);
-            } else {
-                let headerHeight = document.querySelector('header');
-                headerHeight = headerHeight.offsetHeight;
-                document.getElementById('main').style.marginTop = (headerHeight) + "px";
-                document.getElementById('main').style.marginLeft = "0";
+        function headerOffsetListener() {
+            window.addEventListener("resize", function () {
+                if (window.matchMedia("(min-width:768px)").matches) {
+                    let headerWidth = document.querySelector('header');
+                    headerWidth = headerWidth.offsetWidth;
+                    document.getElementById('main').style.marginLeft = headerWidth + "px";
+                    document.getElementById('main').style.marginTop = "0";
+                    const element = document.getElementById('about');
+                    about.scrollIntoView(true);
+                } else {
+                    let headerHeight = document.querySelector('header');
+                    headerHeight = headerHeight.offsetHeight;
+                    document.getElementById('main').style.marginTop = (headerHeight) + "px";
+                    document.getElementById('main').style.marginLeft = "0";
+                }
+            })
+        }
+
+        var checkbox = document.getElementById("overlay-toggle");
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                setTimeout(() => { headerOffsetListener() }, 1200);
             }
         })
         // audio play function

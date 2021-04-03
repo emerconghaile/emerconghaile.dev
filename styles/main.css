@@ -57,21 +57,21 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
 }
 
 .nav-links a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
     font-size: 1rem;
-    padding: 1em;
-    color: var(--clr-white);
-    font-size: 1rem;
-    transition: outline-offset 250ms ease-in-out, outline-width 250ms ease-in-out;
+    color: white;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .nav-links a:hover {
-    outline: solid 0px var(--clr-white);
-    outline-offset: -6px;
-    outline-width: 3px;
+    background-color: rgb(255,255,255);
+    color: black;
 }
 
 input[type=checkbox] {
@@ -79,25 +79,18 @@ input[type=checkbox] {
     display: none;
 }
 
-.top-label, .bottom-label {
+#overlay {
     z-index: 1;
     position: fixed;
     min-width: 100vw;
-    min-height: 50vh;
-    display: grid;
-    place-content: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     background-color: white;
     color: black;
-    text-align: center;
-}
-
-.top-label {
-    top: 0;
-}
-
-.bottom-label {
-    bottom: 0;
 }
 
 .no-hover {
@@ -110,10 +103,6 @@ input[type=checkbox] {
 
 .overlay-text {
     font-size: 2rem;
-}
-
-.small-overlay-text {
-    font-size: 1rem;
 }
 
 .fullscreen {
@@ -478,150 +467,43 @@ section {
     outline: none;
 }
 
-/* custom animation time properties */
+/* text-grow */
 
-.overlay {
-    --text-grow-duration: 400ms;
-    --slide-delay: 400ms;
-    --slide-duration: 500ms;
-}
-
-/* if audio is played */
-
-#play-audio-toggle:checked~* .grow-shrink-top {
+#overlay-toggle:checked~* .overlay-span {
     animation-fill-mode: forwards;
     animation-name: text-grow;
-    animation-duration: var(--text-grow-duration);
-}
-
-#play-audio-toggle:checked~* .grow-shrink-bot {
-    animation-fill-mode: forwards;
-    animation-name: text-shrink;
-    animation-duration: var(--text-grow-duration);
-}
-
-#play-audio-toggle:checked~* .bar-top {
-    animation-fill-mode: forwards;
-    animation-name: text-bar-down;
-    animation-delay: 400ms;
-    animation-duration: 500ms;
-}
-
-#play-audio-toggle:checked~* .bar-bot {
-    animation-fill-mode: forwards;
-    animation-name: text-bar-up;
-    animation-delay: 400ms;
-    animation-duration: 500ms;
-}
-
-/* if audio is muted */
-
-#mute-audio-toggle:checked~* .grow-shrink-bot {
-    animation-fill-mode: forwards;
-    animation-name: text-grow;
-    animation-duration: var(--text-grow-duration);
-}
-
-#mute-audio-toggle:checked~* .grow-shrink-top {
-    animation-fill-mode: forwards;
-    animation-name: text-shrink;
-    animation-duration: var(--text-grow-duration);
-}
-
-#mute-audio-toggle:checked~* .bar-top {
-    animation-fill-mode: forwards;
-    animation-name: text-bar-down;
-    animation-delay: 400ms;
     animation-duration: 400ms;
 }
 
-#mute-audio-toggle:checked~* .bar-bot {
+@keyframes text-grow {
+    to {
+        transform: scale(2);
+        color: white;
+    }
+}
+
+#overlay-toggle:checked~* p {
     animation-fill-mode: forwards;
-    animation-name: text-bar-up;
-    animation-delay: 400ms;
+    animation-name: text-shrink;
     animation-duration: 400ms;
 }
 
 @keyframes text-shrink {
     to {
-        transform: scale(0.7);
+        transform: scale(0);
+        color: white;
     }
 }
 
-@keyframes text-grow {
-    to {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes text-bar-down {
-    to {
-        transform: translateY(25vh) scale(20, 0.2);
-        background-color: black;
-    }
-}
-
-@keyframes text-bar-up {
-    to {
-        transform: translateY(-25vh) scale(20, 0.2);
-        background-color: black;
-    }
-}
-
-/* slide up overlay */
-
-#play-audio-toggle:checked~* .top-label {
+#overlay-toggle:checked ~ #overlay {
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
     animation-name: slide-up;
-    animation-delay: 900ms;
-    animation-duration: var(--slide-duration);
-}
-
-#play-audio-toggle:checked~* .bottom-label {
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-name: slide-down;
-    animation-delay: 900ms;
-    animation-duration: var(--slide-duration);
-}
-
-#mute-audio-toggle:checked~* .top-label {
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-name: slide-up;
-    animation-delay: 900ms;
-    animation-duration: var(--slide-duration);
-}
-
-#mute-audio-toggle:checked~* .bottom-label {
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-name: slide-down;
-    animation-delay: 900ms;
-    animation-duration: var(--slide-duration);
+    animation-delay: 400ms;
+    animation-duration: 400ms;
 }
 
 @keyframes slide-up {
     to {
-        transform: translateY(-100vh);
+        opacity: 0;
     }
-}
-
-@keyframes slide-down {
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-#scroll-snap {
-    scroll-snap-type: y mandatory;
-}
-
-#about {
-    scroll-snap-align: start;
-}
-
-#portfolio {
-    scroll-snap-align: start;
 }

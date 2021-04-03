@@ -2,17 +2,15 @@
     body {
         overflow-x: hidden;
     }
-    .grow-shrink-top {
+    #overlay p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .overlay-span {
         transition: transform 250ms ease;
     }
-    .grow-shrink-top:hover {
-        transform: scale(1.1);
-    }
-    .grow-shrink-bot {
-        transition: transform 250ms ease;
-    }
-    .grow-shrink-bot:hover {
-        transform: scale(1.1);
+    .overlay-span:hover {
+        transform: scale(1.2);
     }
     header {
         height: 100%;
@@ -23,13 +21,11 @@
         display: grid;
     }
     .nav-links a {
+        height: 100%;
+        display: flex;
+        align-items: center;
         font-size: 1.2rem;
         padding: 0 1em;
-        transition: none;
-        outline: 0;
-    }
-    .nav-links a:focus {
-        outline: 0;
     }
     #about {
         padding: 2em 0;

@@ -46,7 +46,7 @@
                 } else {
                     let headerHeight = document.querySelector('header');
                     headerHeight = headerHeight.offsetHeight;
-                    document.getElementById('main').style.marginTop = (headerHeight + 32) + "px";
+                    document.getElementById('main').style.marginTop = (headerHeight) + "px";
                     document.getElementById('main').style.marginLeft = "0px";
                 }
             }
@@ -55,7 +55,7 @@
                 document.getElementById("overlay").style.display = "none";
                 document.getElementById("body").style.overflowY = "scroll";
             }
-            setTimeout(() => { overlayScroll() }, 1400);
+            setTimeout(() => { overlayScroll() }, 800);
             headerOffset();
         }
         // function audioPlay() {
@@ -67,24 +67,12 @@
             video.play()
         }
     </script>
-    <input type="checkbox" autocomplete="off" id="play-audio-toggle">
-    <input type="checkbox" autocomplete="off" id="mute-audio-toggle">
-    <div id="overlay" class="overlay">
-        <label class="top-label" for="play-audio-toggle" id="play-audio" onclick="videoPlay();overlayToggle()">
-            <span class="bar-top">
-                <span class="grow-shrink-top overlay-text no-hover">tap to enter<br><span
-                        class="small-overlay-text">with audio</span></span>
-                <span class="grow-shrink-top overlay-text hover">click to enter<br><span class="small-overlay-text">with
-                        audio</span></span>
-            </span>
-        </label>
-        <label class="bottom-label" for="mute-audio-toggle" id="mute-audio" onclick="videoPlay();overlayToggle()">
-            <span class="bar-bot">
-                <span class="grow-shrink-bot overlay-text no-hover">tap to enter<br><span
-                        class="small-overlay-text">muted</span></span>
-                <span class="grow-shrink-bot overlay-text hover">click to enter<br><span
-                        class="small-overlay-text">muted</span></span>
-            </span>
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div id="overlay">
+        <p>Yo, my name is Emer.<br>I'm a web developer.<br>Want to learn more about me?</p>
+        <label class="overlay-label" for="overlay-toggle" onclick="videoPlay();overlayToggle()">
+                <span class="overlay-span overlay-text no-hover">tap to enter</span>
+                <span class="overlay-span overlay-text hover">click to enter</span>
         </label>
     </div>
     <header id="header">
@@ -201,7 +189,7 @@
             } else {
                 let headerHeight = document.querySelector('header');
                 headerHeight = headerHeight.offsetHeight;
-                document.getElementById('main').style.marginTop = (headerHeight + 32) + "px";
+                document.getElementById('main').style.marginTop = (headerHeight) + "px";
                 document.getElementById('main').style.marginLeft = "0";
             }
         })

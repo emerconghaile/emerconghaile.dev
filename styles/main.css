@@ -189,7 +189,7 @@ video::-webkit-media-controls {
 }
 
 .about-desc {
-    margin: 2rem 0;
+    margin: 1em 0;
     flex-direction: column;
 }
 

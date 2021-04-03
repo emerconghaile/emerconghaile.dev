@@ -55,7 +55,7 @@
                 document.getElementById("overlay").style.display = "none";
                 document.getElementById("body").style.overflowY = "scroll";
             }
-            setTimeout(() => { overlayScroll() }, 800);
+            setTimeout(() => { overlayScroll() }, 1200);
             headerOffset();
         }
         // function audioPlay() {
@@ -71,8 +71,8 @@
     <div id="overlay">
         <p>Yo, my name is Emer.<br>I'm a web developer.<br>Want to learn more about me?</p>
         <label class="overlay-label" for="overlay-toggle" onclick="videoPlay();overlayToggle()">
-                <span class="overlay-span overlay-text no-hover">tap to enter</span>
-                <span class="overlay-span overlay-text hover">click to enter</span>
+            <span class="overlay-span overlay-text no-hover">tap to enter</span>
+            <span class="overlay-span overlay-text hover">click to enter</span>
         </label>
     </div>
     <header id="header">

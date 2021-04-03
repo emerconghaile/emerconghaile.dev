@@ -8,12 +8,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,.4);
+    background: rgba(255, 255, 255, .4);
     border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, .5);
 }
 
 :root {
@@ -53,27 +53,6 @@ a {
     text-decoration: none;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav-links a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1em 0;
-    font-size: 1rem;
-    color: white;
-    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-}
-
-.nav-links a:hover {
-    background-color: rgb(255,255,255);
-    color: black;
-}
-
 input[type=checkbox] {
     position: absolute;
     display: none;
@@ -93,6 +72,12 @@ input[type=checkbox] {
     color: black;
 }
 
+#overlay p {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    padding: 0 1em;
+}
+
 .no-hover {
     display: block;
 }
@@ -102,7 +87,29 @@ input[type=checkbox] {
 }
 
 .overlay-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0 1em;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .fullscreen {
@@ -126,7 +133,7 @@ input[type=checkbox] {
 }
 
 video::-webkit-media-controls {
-    display:none !important;
+    display: none !important;
 }
 
 .bg-video {
@@ -472,7 +479,7 @@ section {
 #overlay-toggle:checked~* .overlay-span {
     animation-fill-mode: forwards;
     animation-name: text-grow;
-    animation-duration: 400ms;
+    animation-duration: 600ms;
 }
 
 @keyframes text-grow {
@@ -482,10 +489,10 @@ section {
     }
 }
 
-#overlay-toggle:checked~* p {
+#overlay-toggle:checked~#overlay p {
     animation-fill-mode: forwards;
     animation-name: text-shrink;
-    animation-duration: 400ms;
+    animation-duration: 600ms;
 }
 
 @keyframes text-shrink {
@@ -495,11 +502,11 @@ section {
     }
 }
 
-#overlay-toggle:checked ~ #overlay {
+#overlay-toggle:checked~#overlay {
     animation-fill-mode: forwards;
     animation-name: slide-up;
-    animation-delay: 400ms;
-    animation-duration: 400ms;
+    animation-delay: 600ms;
+    animation-duration: 600ms;
 }
 
 @keyframes slide-up {

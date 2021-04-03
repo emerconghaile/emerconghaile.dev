@@ -247,7 +247,6 @@ video::-webkit-media-controls {
 }
 
 #websites {
-    /* height: 400px; */
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
@@ -362,10 +361,10 @@ section {
 
 #github {
     position: relative;
-    /* height: 400px; */
     background: rgba(255, 255, 255, 0.8);
     color: black;
     text-align: center;
+    padding: 2rem 0;
 }
 
 .github-card {

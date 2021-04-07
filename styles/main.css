@@ -386,13 +386,26 @@ section {
     outline: 0px solid black;
 }
 
+.github-name, .github-desc {
+    text-shadow: -1px -1px 5px white, -1px 1px 5px white, 1px -1px 5px white, 1px 1px 5px white;
+}
+
 .github-name {
     font-size: 2rem;
-    text-shadow: -1px -1px 5px white, -1px 1px 5px white, 1px -1px 5px white, 1px 1px 5px white;
+}
+
+.github-desc {
+    font-size: 1.4rem;
 }
 
 .audio-splash-screen {
     background: url("../images/audio-splash-screen.webp"), url("../images/audio-splash-screen.gif") center;
+    background-size: cover;
+    border: 0;
+}
+
+.plu-discord-bot {
+    background: url("https://github.com/emerconghaile/plu-discord-bot/blob/main/icon.jpg?raw=true") center;
     background-size: cover;
     border: 0;
 }

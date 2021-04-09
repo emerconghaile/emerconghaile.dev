@@ -391,7 +391,7 @@ section {
 }
 
 .github-name, .github-desc {
-    text-shadow: -2px -2px 3px white, -2px 2px 3px white, 2px -2px 3px white, 2px 2px 3px white;
+    text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 6px white, 0 0 8px white, 0 0 10px white;
 }
 
 .github-name {
@@ -403,7 +403,7 @@ section {
 }
 
 .audio-splash-screen {
-    background: url("../images/audio-splash-screen.webp"), url("../images/audio-splash-screen.gif") center;
+    background: url("../images/audio-splash-screen.jpg") center;
     background-size: cover;
     border: 0;
 }

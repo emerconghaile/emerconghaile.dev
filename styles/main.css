@@ -384,7 +384,7 @@ section {
 }
 
 .seven-digits {
-    background: url("../images/7digits.webp"), url("../images/7digits.jpg") center;
+    background: url("../images/7digits.webp") center;
     background-size: cover;
     border: 0;
 }
@@ -450,13 +450,13 @@ section {
 }
 
 .audio-splash-screen {
-    background: url("../images/audio-splash-screen.jpg") center;
+    background: url("../images/audio-splash-screen.webp") center;
     background-size: cover;
     border: 0;
 }
 
 .plu-discord-bot {
-    background: url("https://github.com/emerconghaile/plu-discord-bot/blob/main/icon.jpg?raw=true") center;
+    background: url("../images/plu-bot.webp") center;
     background-size: cover;
     border: 0;
 }
